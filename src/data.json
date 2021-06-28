@@ -1,0 +1,6 @@
+[
+    { "name": "jamon", "price": 22, "empresa": "ACmE" },
+  { "name": "queso", "price": 10, "empresa": "Burgos SA" },
+  { "name": "lapiz", "price": 1, "empresa": "Faber Castell" },
+  { "name": "Zapatos", "price": 100, "empresa": "Zara" }
+]
