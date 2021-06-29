@@ -1,0 +1,25 @@
+@import "../../Sass/colors";
+@import "../../Sass/mixins";
+
+.Header {
+  background: $color-primary;
+  width: 100%;
+  top: 0;
+  position: fixed;
+  color: white;
+  box-shadow: 4px 4px 24px $color-primary-dark,
+    -4px -4px 24px $color-primary-light;
+  > div.wrapper{
+    @include flex-row-space-between();
+    flex-flow: nowrap;
+    >  h1 {
+      font-family: sans-serif;
+      margin: 0;
+    }
+
+    >img{
+      width: 56px;
+      height: 56px;
+    }
+  }
+}

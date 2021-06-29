@@ -1,0 +1,43 @@
+@import "../../Sass/mixins";
+@import'../../Sass/colors';
+.Product {
+  @include flex-column();
+  margin: 0 6px;
+  background: $color-primary;
+  box-shadow: 4px 4px 18px $color-primary-dark, -4px -4px 18px $color-primary-light;
+  border-radius: 12px;
+  width: 98%;
+  padding: 12px;
+  margin-bottom: 12px;
+  > * {
+    margin: 6px 0;
+  }
+  h3{
+    font-weight: normal;
+  }
+  p{
+    font-weight: lighter;
+    color: $color-type-light;
+  }
+  &:first-child {
+    margin-top: 12px;
+  }
+
+}
+
+@media screen and (min-width: 565px) and (max-width: 959px) {
+  .Product {
+    width: 45%;
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+}
+@media screen and (min-width: 961px) {
+  .Product {
+    width: 31%;
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+}

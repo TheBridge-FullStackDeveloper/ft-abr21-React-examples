@@ -1,24 +1,26 @@
-import React, { Component } from 'react';
-import './Nav.css';
+import React, { Component } from "react";
+import "./Nav.scss";
 
 class Nav extends Component {
-  // constructor(props){
-    // super(props);
-    // this.state = {};
-  // }
-
-  // componentWillMount(){}
-  // componentDidMount(){}
-  // componentWillUnmount(){}
-
-  // componentWillReceiveProps(){}
-  // shouldComponentUpdate(){}
-  // componentWillUpdate(){}
-  // componentDidUpdate(){}
 
   render() {
     return (
-      <div></div>
+      <nav className="Nav">
+        <ul className="Nav__list">
+          <li className="Nav__listItem">
+            <a className="Nav__link" href="/landing">Inicio</a>
+          </li>
+          <li>
+            <a href="/staff"> Quienes somos</a>
+          </li>
+          <li>
+            <a href="/location"> Dónde Estamos</a>
+          </li>
+          <li>
+            <a href="/contact"> Conócenos</a>
+          </li>
+        </ul>
+      </nav>
     );
   }
 }

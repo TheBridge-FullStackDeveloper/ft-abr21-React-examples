@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-
+import  './Product.scss';
 export default class Product extends Component {
 
     constructor(props) {
@@ -15,7 +15,7 @@ export default class Product extends Component {
 
         let {name,price,empresa} = this.props.data;
         return (
-            <section>
+            <section className='Product'>
                 <h3>Producto: {name}</h3>
                 <p>Precio: {price || this.state.price} €</p>
                 <p>Empresa: {empresa?empresa:this.state.empresa}</p>
