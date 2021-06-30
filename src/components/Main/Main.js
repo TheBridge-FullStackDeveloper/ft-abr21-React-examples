@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
-import Products from '../Products/Products';
+import {Route, Switch} from 'react-router-dom';
+import Products from '../../pages/Products/Products';
+import Staff from '../../pages/Staff';
+import Location from '../../pages/Location';
+import Contact from '../../pages/Contact';
 import './Main.scss';
 
 export default class Main extends Component {
@@ -7,7 +11,12 @@ export default class Main extends Component {
         return (
             <main className='Main'>
                 <div className="wrapper">
-                     <Products/> 
+                    <Switch>
+                        <Route path="/" component={Products} exact />
+                        <Route path="/staff" component={Staff} />
+                        <Route path="/location" component={Location} />
+                        <Route path="/contact" component={Contact} />
+                    </Switch>
                 </div>
             </main>
         )

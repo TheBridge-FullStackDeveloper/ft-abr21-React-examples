@@ -9,7 +9,7 @@ export default class Header extends Component {
         <div className="wrapper">
           <img src={logo} alt="web logo" />
           <h1>Super App React</h1>
-          <Nav />
+            <Nav/>
         </div>
       </header>
     );
