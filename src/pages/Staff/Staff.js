@@ -18,7 +18,7 @@ class Staff extends Component {
 
   render() {
     return (
-      <div> Aqui staff</div>
+      <div> Aqui staff!</div>
     );
   }
 }
