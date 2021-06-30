@@ -1,24 +1,36 @@
 import React, { Component } from 'react';
+import axios from 'axios';
+
 import './Staff.css';
 
 class Staff extends Component {
-  // constructor(props){
-    // super(props);
-    // this.state = {};
-  // }
+  constructor(props){
+    super(props);
+    this.state = {
+      persons: []
+    };
+  }
 
-  // componentWillMount(){}
-  // componentDidMount(){}
-  // componentWillUnmount(){}
+  componentDidMount() {
 
-  // componentWillReceiveProps(){}
-  // shouldComponentUpdate(){}
-  // componentWillUpdate(){}
-  // componentDidUpdate(){}
+
+    setTimeout( () => { 
+      axios.get(`https://jsonplaceholder.typicode.com/users`)
+      .then(res => {
+        const persons = res.data;
+        this.setState({ persons });
+      })
+    }, 2000);
+
+   
+  }
+  
 
   render() {
     return (
-      <div> Aqui staff!</div>
+      <ul>
+        { this.state.persons.map((person,index) => <li key={index}>{person.name}</li>)}
+    </ul>
     );
   }
 }
