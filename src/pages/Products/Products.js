@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Product from "../Product/Product";
+import Product from "./Product";
 import data from "../../data.json";
 import "./Products.scss";
 

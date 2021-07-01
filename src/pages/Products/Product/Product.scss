@@ -1,5 +1,6 @@
-@import "../../Sass/mixins";
-@import'../../Sass/colors';
+@import "../../../Sass/mixins";
+@import'../../../Sass/colors';
+
 .Product {
   @include flex-column();
   margin: 0 6px;
