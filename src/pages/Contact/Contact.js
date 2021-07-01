@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import './Contact.css';
 
+import {userContext} from '../../context/userContext';
+
 class Contact extends Component {
   constructor(props){
     super(props);
@@ -45,8 +47,13 @@ class Contact extends Component {
             Person Name:
             <input type="text" name="name" onChange={this.handleChange} />
           </label>
-          <button type="submit">Add</button>
+        <userContext.Consumer>
+        {({loginUser}) => 
+          <button type="submit" onClick={()=>loginUser(this.state.name)}>Add</button>
+        }
+        </userContext.Consumer>
         </form>
+
         <p>Usuario introducido: {this.state.name ||"--"}</p>
         
         {this.sendConfirm()}    
