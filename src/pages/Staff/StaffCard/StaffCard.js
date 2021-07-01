@@ -1,26 +1,13 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './StaffCard.css';
 
-class StaffCard extends Component {
-  // constructor(props){
-    // super(props);
-    // this.state = {};
-  // }
-
-  // componentWillMount(){}
-  // componentDidMount(){}
-  // componentWillUnmount(){}
-
-  // componentWillReceiveProps(){}
-  // shouldComponentUpdate(){}
-  // componentWillUpdate(){}
-  // componentDidUpdate(){}
-
-  render() {
-    return (
-      <div></div>
-    );
-  }
+function StaffCard(props) {
+  return (
+      // Por probar fragmentos....
+      <>
+        <h3>Nombre:{props.person.name}</h3>    
+        <p>Email:{props.person.email}</p>
+      </>)
 }
 
-export default StaffCard;
+export default StaffCard

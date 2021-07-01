@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import StaffCard from './StaffCard';
 
 import './Staff.css';
 
@@ -22,15 +23,18 @@ class Staff extends Component {
       })
     }, 2000);
 
-   
   }
   
+  paintCards = () => 
+    this.state.persons.map((person,index) => <StaffCard person={person} key={index}/>)
+
+
 
   render() {
     return (
-      <ul>
-        { this.state.persons.map((person,index) => <li key={index}>{person.name}</li>)}
-    </ul>
+      <section>
+        {this.paintCards()}
+      </section>
     );
   }
 }
