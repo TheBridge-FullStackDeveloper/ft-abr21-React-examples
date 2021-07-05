@@ -12,21 +12,16 @@ export default class Header extends Component {
         <div className="wrapper">
           <img src={logo} alt="web logo" />
           <h1>Super App React</h1>
-            <Nav />
-            <br />
-
-
-            <userContext.Consumer>
+            <Nav /> 
+        </div>
+        <userContext.Consumer>
             {({user,logoutUser}) => 
-                <>
+                <div className="user">
                   <p>User: {user.name}</p>
                   <button onClick={logoutUser}>Logout</button>
-                </>
+                </div>
             }
-            </userContext.Consumer>
-            
-            
-        </div>
+        </userContext.Consumer>
       </header>
     );
   }

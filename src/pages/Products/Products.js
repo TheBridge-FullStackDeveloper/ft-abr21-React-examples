@@ -45,6 +45,8 @@ export default class Products extends Component {
     this.addProduct({ name, price, empresa });
   };
 
+  renderNews = () => this.state.products.map(ele => <p>{ele.title}</p>)
+
   render() {
     return (
       <article className="Products">
@@ -65,6 +67,7 @@ export default class Products extends Component {
 
         <div className="container">
           {this.renderProducts()}
+          {this.renderNews()}
         </div>
 
         <p>Último producto añadido: {this.state.name}</p>

@@ -1,0 +1,39 @@
+@import '../../Sass/colors';
+@import '../../Sass/mixins';
+
+
+.Counter{
+    @include flex-column-center();
+    margin-top: 150px;
+    margin-bottom: 50px;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 4px 4px 24px $color-primary-dark,
+    -4px -4px 24px $color-primary-light;
+    > p{
+        @include flex-column-center();
+        font-family: 'Courier New', Courier, monospace;
+        font-weight: 800;
+        font-size: 22px;
+        border-radius: 50%;
+        height: 150px;
+        width: 150px;
+        box-shadow: 4px 4px 24px $color-primary-dark,
+        -4px -4px 24px $color-primary-light;
+    }
+    > div{
+        @include flex-row-space-between();
+        width: 200px;
+        margin-top: 30px;
+    }
+    >div > p{
+        font-family: 'Courier New', Courier, monospace;
+        font-weight: 800;
+        font-size: 16px;
+        text-align: center;
+        line-height: 24px;
+        border-radius: 8px;
+        box-shadow: 4px 4px 24px $color-primary-dark,
+        -4px -4px 24px $color-primary-light;
+    }
+}

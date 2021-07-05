@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import './Counter.css'
+import './Counter.scss'
 
 const Counter = () => {
 
@@ -42,12 +42,11 @@ useEffect(() => {
   return (
     <div className="Counter">
       <p>Count: {count}</p>
-
-      <button onClick={() => setCount(0)}>Reset</button>
-
-      <button onClick={() => setCount(count - 1)}>-</button>
-
-      <button onClick={() => setCount(count + 1)}>+</button>
+      <div>
+        <button onClick={() => setCount(0)}>Reset</button>
+        <button onClick={() => setCount(count - 1)}>-</button>
+        <button onClick={() => setCount(count + 1)}>+</button>
+      </div>
       <div>
         { hidden ? '' : <p>El contador ha llegado a 5</p> }
       </div>
