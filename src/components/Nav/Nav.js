@@ -18,6 +18,12 @@ function Nav() {
           <li>
             <Link to="/contact"> Conócenos</Link>
           </li>
+          <li>
+            <Link to="/login"> Ingresar</Link>
+          </li>
+          <li>
+            <Link to="/counter"> Contador</Link>
+          </li>
         </ul>
       </nav>
   )

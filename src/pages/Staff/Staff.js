@@ -13,8 +13,6 @@ class Staff extends Component {
   }
 
   componentDidMount() {
-
-
     setTimeout( () => { 
       axios.get(`https://jsonplaceholder.typicode.com/users`)
       .then(res => {
@@ -22,8 +20,9 @@ class Staff extends Component {
         this.setState({ persons });
       })
     }, 2000);
-
   }
+
+
   
   paintCards = () => 
     this.state.persons.map((person,index) => <StaffCard person={person} key={index}/>)

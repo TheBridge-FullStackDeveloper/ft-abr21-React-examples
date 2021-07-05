@@ -63,7 +63,9 @@ export default class Products extends Component {
           <input type="submit" value="Enviar" />
         </form>
 
-        <div className="container">{this.renderProducts()}</div>
+        <div className="container">
+          {this.renderProducts()}
+        </div>
 
         <p>Último producto añadido: {this.state.name}</p>
 

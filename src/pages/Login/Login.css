@@ -1,0 +1,8 @@
+.Login{
+    margin-top: 200px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+}
