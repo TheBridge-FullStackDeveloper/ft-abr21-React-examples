@@ -27,3 +27,8 @@
     justify-content: space-between;
     align-items: center;
 }
+
+@mixin dark-theme(){
+    background-color: black;
+    box-shadow: 4px 4px 24px grey
+}

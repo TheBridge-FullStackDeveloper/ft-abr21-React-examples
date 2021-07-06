@@ -1,11 +1,13 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useContext } from 'react'
 import './Counter.scss'
+import { ThemeContext } from '../../context/themeContext'
 
 const Counter = () => {
 
   const [count, setCount] = useState(0);
   const [hidden, setHidden] = useState(true)
-  
+
+  const { theme } = useContext(ThemeContext)
 
   // Trabajamos con el ciclo de vida de forma similar a componentDidMount()
   useEffect(() => {
@@ -38,9 +40,9 @@ useEffect(() => {
     return () => clearInterval(interval)
 }, []);
 
-
+// reemplazamos el valor de className por un string literal que admita una variable
   return (
-    <div className="Counter">
+    <div className={`Counter ${theme}`}>
       <p>Count: {count}</p>
       <div>
         <button onClick={() => setCount(0)}>Reset</button>

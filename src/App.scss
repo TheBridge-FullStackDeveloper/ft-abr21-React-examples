@@ -56,3 +56,7 @@ body{
   background: $color-primary;
   color: $color-bg;
 }
+
+.dark{
+  @include dark-theme()
+}

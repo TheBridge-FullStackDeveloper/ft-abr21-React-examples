@@ -1,41 +1,28 @@
-import React, { Component } from 'react';
-import axios from 'axios';
+// Vamos a refactorizar nuestro componente Staff para hacerlo funcional y poder trabajar con nuestro custom hook
+import React, { useState, useEffect } from 'react';
+import useFetch from '../../hooks/useFetch';
 import StaffCard from './StaffCard';
 
-import './Staff.css';
+import './Staff.scss';
 
-class Staff extends Component {
-  constructor(props){
-    super(props);
-    this.state = {
-      persons: []
-    };
-  }
+const Staff = () => {
 
-  componentDidMount() {
-    setTimeout( () => { 
-      axios.get(`https://jsonplaceholder.typicode.com/users`)
-      .then(res => {
-        const persons = res.data;
-        this.setState({ persons });
-      })
-    }, 2000);
-  }
+  const [persons, setPersons] = useState([])
+  const { loading, result } = useFetch(`https://jsonplaceholder.typicode.com/users`)
 
+
+  useEffect(()=>{
+    setPersons(result)
+  }, [result])
 
   
-  paintCards = () => 
-    this.state.persons.map((person,index) => <StaffCard person={person} key={index}/>)
+  const paintCards = () => persons.map((person,index) => <StaffCard person={person} key={index}/>)
 
-
-
-  render() {
     return (
       <section>
-        {this.paintCards()}
+        { loading ? <p>LOADING...</p> : paintCards()}
       </section>
-    );
-  }
+    )
 }
 
 export default Staff;
